@@ -2,8 +2,8 @@
 let PIXELS = 1200;
 
 
-let n_cells_wide = 200;
-let n_cells_high = 200;
+let n_cells_wide = 300;
+let n_cells_high = 300;
 
 let pw = PIXELS / n_cells_wide;
 let ph = PIXELS / n_cells_high;
@@ -13,7 +13,7 @@ var row = 0;
 
 //let RULE = 105;
 //let RULE = 105;
-let RULE = 46;
+let RULE = 137;
 let RULE_BITS = []
 
 for(i = 0; i<8; i++) {
@@ -34,20 +34,15 @@ function setup() {
 }
 
 
-function draw() {
-     //if ( row > n_cells_high) {
-     //   noloop();
-    //}
-    
-    let r = random(255);
-    let g = (row * 34387) % 255
-    let b = random(255);
+function draw() {  
+    let r = 10;
+    let g = 190;
+    let b = 180;
 
     for(i=0; i<n_cells_wide; i++) {
         if (cells[i] == 1) {
-            fill(0,255,0);
-            //console.log("fffffggg" + i);
- 
+            fill(r,g,b);
+
         } else {
             fill(250,250,255);
         }
